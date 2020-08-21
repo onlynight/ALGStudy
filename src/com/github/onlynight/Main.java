@@ -13,7 +13,7 @@ public class Main {
         printArray(array);
 
         System.out.println("steps:");
-        BubbleSort.sort(array, step -> {
+        new BubbleSort().sort(array, step -> {
 //            printArray(step);
             return false;
         });

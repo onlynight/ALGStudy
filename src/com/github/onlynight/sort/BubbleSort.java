@@ -2,13 +2,15 @@ package com.github.onlynight.sort;
 
 import java.util.List;
 
-public class BubbleSort {
+public class BubbleSort implements Sort {
 
-    public static void sort(List<Integer> array) {
+    @Override
+    public void sort(List<Integer> array) {
         sort(array, null);
     }
 
-    public static void sort(List<Integer> array, StepCallback callback) {
+    @Override
+    public void sort(List<Integer> array, StepCallback callback) {
         if (array == null) {
             return;
         }
