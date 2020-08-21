@@ -1,6 +1,7 @@
 package com.github.onlynight;
 
 import com.github.onlynight.sort.BubbleSort;
+import com.github.onlynight.sort.SelectSort;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,10 +13,16 @@ public class Main {
         System.out.println("原始列表");
         printArray(array);
 
-        System.out.println("steps:");
-        new BubbleSort().sort(array, step -> {
-//            printArray(step);
-            return false;
+//        System.out.println("Bubble steps:");
+//        new BubbleSort().sort(array, step -> {
+////            printArray(step);
+//            return false;
+//        });
+
+        System.out.println("Select steps:");
+        new SelectSort().sort(array, step -> {
+            printArray(step);
+            return true;
         });
 
         System.out.println("排序后");
