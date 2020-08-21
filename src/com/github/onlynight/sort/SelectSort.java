@@ -5,6 +5,7 @@ import java.util.List;
 public class SelectSort implements Sort {
     @Override
     public void sort(List<Integer> array) {
+        sort(array, null);
     }
 
     @Override
