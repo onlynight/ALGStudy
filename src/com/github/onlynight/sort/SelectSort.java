@@ -2,6 +2,10 @@ package com.github.onlynight.sort;
 
 import java.util.List;
 
+/**
+ * <b>选择排序</b>
+ * 从待排序的列表中找到一个最小的值和放到第一个，依次类推将找到的第二个最小值放到第二个，直至最后一个。
+ */
 public class SelectSort implements Sort {
     @Override
     public void sort(List<Integer> array) {

@@ -2,6 +2,10 @@ package com.github.onlynight.sort;
 
 import java.util.List;
 
+/**
+ * 从第一个值开始，依次和后面的值比较，若比后面的数字大则交换位置；
+ * 遍历完成依次下标往后移一位，直至最后一个值。
+ */
 public class BubbleSort implements Sort {
 
     @Override
