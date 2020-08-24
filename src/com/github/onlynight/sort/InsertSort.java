@@ -6,7 +6,7 @@ import static com.github.onlynight.utils.ArrayUtils.initList;
 import static com.github.onlynight.utils.ArrayUtils.printArray;
 
 /**
- * <br>插入排序</br>
+ * <b>插入排序</b>
  * 从待排序的数组中选择一个值插入到已经有序的列表中，重复上述操作直至遍历完列表。
  */
 public class InsertSort implements Sort {
