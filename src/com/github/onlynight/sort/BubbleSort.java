@@ -6,6 +6,7 @@ import static com.github.onlynight.utils.ArrayUtils.initList;
 import static com.github.onlynight.utils.ArrayUtils.printArray;
 
 /**
+ * <br>冒泡排序</br>
  * 从第一个值开始，依次和后面的值比较，若比后面的数字大则交换位置；
  * 遍历完成依次下标往后移一位，直至最后一个值。
  */
