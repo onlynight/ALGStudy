@@ -2,14 +2,15 @@ package com.github.onlynight.sort;
 
 import java.util.List;
 
-import static com.github.onlynight.sort.SortUtils.initList;
-import static com.github.onlynight.sort.SortUtils.printArray;
+import static com.github.onlynight.utils.ArrayUtils.initList;
+import static com.github.onlynight.utils.ArrayUtils.printArray;
 
 /**
  * <b>选择排序</b>
  * 从待排序的列表中找到一个最小的值和放到第一个，依次类推将找到的第二个最小值放到第二个，直至最后一个。
  */
 public class SelectSort implements Sort {
+
     @Override
     public void sort(List<Integer> array) {
         sort(array, null);
@@ -64,4 +65,5 @@ public class SelectSort implements Sort {
         System.out.println("排序后");
         printArray(array);
     }
+
 }

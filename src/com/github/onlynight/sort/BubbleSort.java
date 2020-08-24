@@ -2,8 +2,8 @@ package com.github.onlynight.sort;
 
 import java.util.List;
 
-import static com.github.onlynight.sort.SortUtils.initList;
-import static com.github.onlynight.sort.SortUtils.printArray;
+import static com.github.onlynight.utils.ArrayUtils.initList;
+import static com.github.onlynight.utils.ArrayUtils.printArray;
 
 /**
  * 从第一个值开始，依次和后面的值比较，若比后面的数字大则交换位置；

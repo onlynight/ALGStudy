@@ -1,10 +1,15 @@
-package com.github.onlynight.sort;
+package com.github.onlynight.utils;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class SortUtils {
+public class ArrayUtils {
 
+    /**
+     * 初始化集合-
+     *
+     * @return 返回乱序的集合列表
+     */
     public static List<Integer> initList() {
         List<Integer> array = new ArrayList<>();
         array.add(123);
@@ -20,6 +25,11 @@ public class SortUtils {
         return array;
     }
 
+    /**
+     * 打印列表集合
+     *
+     * @param array 指定要打印的列表集合
+     */
     public static void printArray(List<Integer> array) {
         for (Integer integer : array) {
             System.out.print(integer + " ");

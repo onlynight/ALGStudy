@@ -2,15 +2,17 @@ package com.github.onlynight.sort;
 
 import java.util.List;
 
-import static com.github.onlynight.sort.SortUtils.initList;
-import static com.github.onlynight.sort.SortUtils.printArray;
+import static com.github.onlynight.utils.ArrayUtils.initList;
+import static com.github.onlynight.utils.ArrayUtils.printArray;
 
 /**
  * 从待排序的数组中选择一个值插入到已经有序的列表中，重复上述操作直至遍历完列表。
  */
 public class InsertSort implements Sort {
+
     @Override
     public void sort(List<Integer> array) {
+        sort(array, null);
     }
 
     @Override
