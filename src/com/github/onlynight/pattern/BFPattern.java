@@ -1,5 +1,8 @@
 package com.github.onlynight.pattern;
 
+/**
+ * <b>bf 字符串模式匹配算法</b>
+ */
 public class BFPattern implements Pattern {
 
     @Override
@@ -37,6 +40,9 @@ public class BFPattern implements Pattern {
         String target = "qwerrtyuyuiopqwerqwer";
         String pattern = "i";
         int result = new BFPattern().match(target, pattern);
+        System.out.println(result);
+        pattern = "er";
+        result = new BFPattern().match(target, pattern);
         System.out.println(result);
     }
 
