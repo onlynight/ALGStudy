@@ -17,7 +17,7 @@ public class Queue {
         front.value = value;
     }
 
-    public int enqueue() {
+    public int dequeue() {
         if (rear == null) {
             return -1;
         }
@@ -34,16 +34,16 @@ public class Queue {
         Queue queue = new Queue();
         queue.join(1);
         queue.join(2);
-        System.out.println(queue.enqueue());
+        System.out.println(queue.dequeue());
         queue.join(3);
         queue.join(4);
-        System.out.println(queue.enqueue());
-        System.out.println(queue.enqueue());
-        System.out.println(queue.enqueue());
+        System.out.println(queue.dequeue());
+        System.out.println(queue.dequeue());
+        System.out.println(queue.dequeue());
         queue.join(5);
-        System.out.println(queue.enqueue());
-        System.out.println(queue.enqueue());
-        System.out.println(queue.enqueue());
+        System.out.println(queue.dequeue());
+        System.out.println(queue.dequeue());
+        System.out.println(queue.dequeue());
     }
 
 }
