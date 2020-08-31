@@ -37,6 +37,7 @@ public class BFPattern implements Pattern {
     }
 
     public static void main(String[] args) {
+        System.out.println("BF Pattern:");
         String target = "qwerrtyuyuiopqwerqwer";
         String pattern = "i";
         int result = new BFPattern().match(target, pattern);

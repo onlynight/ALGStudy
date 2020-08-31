@@ -48,6 +48,7 @@ public class BMPattern implements Pattern {
     }
 
     public static void main(String[] args) {
+        System.out.println("BM Pattern:");
         String target = "qwerrtyuyuiopqwerqwer";
         String pattern = "i";
         int result = new BFPattern().match(target, pattern);
