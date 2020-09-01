@@ -13,11 +13,43 @@ public class SundayPattern implements Pattern {
         int targetLen = targetChar.length;
         int patternLen = patternChar.length;
 
+        boolean matched = false;
         for (int i = 0; i < targetLen; i++) {
-
+            for (int j = 0; j < patternLen; j++) {
+                if (targetChar[i + j] == patternChar[j]) {
+                    matched = true;
+                } else {
+                    matched = false;
+                    break;
+                }
+            }
+            if (matched) {
+                int index = find(patternChar, patternLen, targetChar[i]);
+                if (index == -1) {
+                    i += patternLen;
+                } else {
+                    i += index;
+                }
+            }
         }
 
         return -1;
+    }
+
+    private int find(char[] patternChar, int patternLen, char target) {
+        if (patternChar == null) {
+            return -1;
+        }
+
+        int index = -1;
+        for (int i = 0; i < patternLen; i++) {
+            if (patternChar[i] == target) {
+                index = i;
+                break;
+            }
+        }
+
+        return index;
     }
 
     public static void main(String[] args) {
