@@ -14,8 +14,10 @@ public class SundayPattern implements Pattern {
         int patternLen = patternChar.length;
 
         boolean matched = false;
+        int matchedIndex = -1;
         for (int i = 0; i < targetLen; i++) {
             for (int j = 0; j < patternLen; j++) {
+                System.out.println("i = " + i + ",j = " + j + "; targetChar[i + j] = " + targetChar[i + j] + " patternChar[j] = " + patternChar[j]);
                 if (targetChar[i + j] == patternChar[j]) {
                     matched = true;
                 } else {
@@ -24,16 +26,21 @@ public class SundayPattern implements Pattern {
                 }
             }
             if (matched) {
-                int index = find(patternChar, patternLen, targetChar[i]);
+                matchedIndex = i;
+                break;
+            }
+            if (i < targetLen - 1) {
+                int index = find(patternChar, patternLen, targetChar[i + patternLen]);
+                System.out.println("next matched index = " + index);
                 if (index == -1) {
-                    i += patternLen;
+                    i += (patternLen - 1);
                 } else {
-                    i += index;
+                    i += (patternLen - 1 - index);
                 }
             }
         }
 
-        return -1;
+        return matchedIndex;
     }
 
     private int find(char[] patternChar, int patternLen, char target) {
@@ -45,7 +52,6 @@ public class SundayPattern implements Pattern {
         for (int i = 0; i < patternLen; i++) {
             if (patternChar[i] == target) {
                 index = i;
-                break;
             }
         }
 
@@ -55,10 +61,13 @@ public class SundayPattern implements Pattern {
     public static void main(String[] args) {
         System.out.println("Sunday Pattern:");
         String target = "qwerrtyuyuiopqwerqwer";
-        String pattern = "i";
+        String pattern = "yu";
         int result = new SundayPattern().match(target, pattern);
         System.out.println(result);
-        pattern = "er";
+        pattern = "erqwe";
+        result = new SundayPattern().match(target, pattern);
+        System.out.println(result);
+        pattern = "uyuiopqw";
         result = new SundayPattern().match(target, pattern);
         System.out.println(result);
     }
